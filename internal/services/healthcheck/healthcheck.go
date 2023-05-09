@@ -14,6 +14,7 @@ const OK = "OK"
 
 var ErrDepencenciesFailed = errors.New("depencencies failed")
 
+//go:generate mockgen -source=healthcheck.go -destination=mock/healthcheck.go -package=mock
 type Depencencie interface {
 	Healthcheck(context.Context) error
 }

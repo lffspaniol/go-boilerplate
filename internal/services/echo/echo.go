@@ -6,6 +6,7 @@ import (
 	"go.uber.org/zap"
 )
 
+//go:generate mockgen -destination=mock/mock_service.go -package=mock boilerplate/internal/services/echo Service
 type Service interface {
 	Healthcheck(context.Context) error
 	Echo(ctx context.Context, message string) (string, error)
