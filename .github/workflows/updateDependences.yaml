@@ -3,7 +3,8 @@ name: deoences-autoupdate
 on: 
   schedule:
     - cron: '0 0 * * *' # every day at 00:00 UTC
-  
+  push:
+
 jobs:
   auto-update:
     runs-on: ubuntu-latest
