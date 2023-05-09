@@ -1,0 +1,14 @@
+version: "3"
+services:
+  server:
+    tty: true
+    container_name: server
+    build:
+      target: development
+      dockerfile: Dockerfile
+      context: ./
+    volumes:
+      - ./:/go/src/app:rw,delegated
+    ports:
+    - 8080:8080
+    - 40000:40000
