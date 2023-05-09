@@ -10,7 +10,7 @@ you can run with VScode task build or type `docker compose up`.
 
 ### Lint
 
-The project utilizes the [golangci-lint](https://golangci-lint.run/) as a lint runner [file](.golangci.yaml)](.golangci.yaml)
+The project utilizes the [golangci-lint](https://golangci-lint.run/) as a lint runner [file](.golangci.yaml)
 
 #### Recommended
 
