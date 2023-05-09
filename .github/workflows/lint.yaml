@@ -1,0 +1,26 @@
+name: golang-ci-lint
+
+on: 
+  pull_request:
+  merge_group:
+
+jobs:
+  build:
+    name: Lint
+
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v3
+
+    - uses: actions/setup-go@v4
+      with:
+        go-version: ^1.20
+        cache: false
+
+    - run: go mod download -x
+
+    - name: golang-ci-lint
+      uses: golangci/golangci-lint-action@v3
+      with:
+        args: --timeout=20m 
