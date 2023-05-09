@@ -23,7 +23,7 @@ func (s *service) Healthcheck(context.Context) error {
 	return nil
 }
 
-func (s *service) Echo(ctx context.Context, message string) (string, error) {
+func (s *service) Echo(_ context.Context, message string) (string, error) {
 	s.log.Info("echo service echo", zap.String("message", message))
 	return message, nil
 }
