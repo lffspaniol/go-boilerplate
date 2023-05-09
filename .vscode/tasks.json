@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "docker compose up",
+      "command": "docker compose up",
+      "group": {
+        "kind": "none",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "type": "go",
+      "label": "go: test workspace",
+      "command": "test",
+      "args": ["./..."],
+      "problemMatcher": ["$go"],
+      "group": "test",
+      "detail": "go test ./..."
+    }
+  ]
+}
